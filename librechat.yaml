@@ -6,3 +6,19 @@ fileStrategy: 'local'
 
 registration:
   socialLogins: []
+
+endpoints:
+  anthropic:
+    models:
+      default:
+        - "claude-opus-5"
+        - "claude-sonnet-5"
+      fetch: false
+
+  google:
+    models:
+      default:
+        - "gemini-3.6-flash"
+        - "gemini-3.1-flash-lite"
+        - "gemini-3.1-pro-preview"
+      fetch: false
