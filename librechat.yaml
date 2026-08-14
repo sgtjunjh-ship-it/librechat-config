@@ -21,15 +21,3 @@ endpoints:
       titleConvo: true
       titleModel: 'claude-sonnet-5'
       modelDisplayLabel: 'Claude'
-
-    - name: 'Google'
-      apiKey: '${GOOGLE_CUSTOM_KEY}'
-      baseURL: 'https://generativelanguage.googleapis.com/v1beta/openai/'
-      models:
-        default:
-          - 'gemini-3.6-flash'
-          - 'gemini-3.1-flash-lite'
-          - 'gemini-3.1-pro-preview'
-        fetch: false
-      titleConvo: true
-      modelDisplayLabel: 'Google'
