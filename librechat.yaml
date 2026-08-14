@@ -8,20 +8,28 @@ registration:
   socialLogins: []
 
 endpoints:
-  anthropic:
-    models:
-      - "claude-opus-5"
-      - "claude-sonnet-5"
-
   custom:
-    - name: "Google"
-      apiKey: "${GOOGLE_KEY}"
-      baseURL: "https://generativelanguage.googleapis.com/v1beta/openai/"
+    - name: 'Claude'
+      provider: 'anthropic'
+      apiKey: '${ANTHROPIC_API_KEY}'
+      baseURL: 'https://api.anthropic.com'
+      headers:
+        anthropic-version: '2023-06-01'
       models:
-        default:
-          - "gemini-3.6-flash"
-          - "gemini-3.1-flash-lite"
-          - "gemini-3.1-pro-preview"
+        default: ['claude-sonnet-5']
         fetch: false
       titleConvo: true
-      modelDisplayLabel: "Google"
+      titleModel: 'claude-sonnet-5'
+      modelDisplayLabel: 'Claude'
+
+    - name: 'Google'
+      apiKey: '${GOOGLE_KEY}'
+      baseURL: 'https://generativelanguage.googleapis.com/v1beta/openai/'
+      models:
+        default:
+          - 'gemini-3.6-flash'
+          - 'gemini-3.1-flash-lite'
+          - 'gemini-3.1-pro-preview'
+        fetch: false
+      titleConvo: true
+      modelDisplayLabel: 'Google'
