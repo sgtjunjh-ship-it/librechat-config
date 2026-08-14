@@ -11,7 +11,7 @@ endpoints:
   custom:
     - name: 'Claude'
       provider: 'anthropic'
-      apiKey: '${ANTHROPIC_API_KEY}'
+      apiKey: '${ANTHROPIC_CUSTOM_KEY}'
       baseURL: 'https://api.anthropic.com'
       headers:
         anthropic-version: '2023-06-01'
@@ -23,7 +23,7 @@ endpoints:
       modelDisplayLabel: 'Claude'
 
     - name: 'Google'
-      apiKey: '${GOOGLE_KEY}'
+      apiKey: '${GOOGLE_CUSTOM_KEY}'
       baseURL: 'https://generativelanguage.googleapis.com/v1beta/openai/'
       models:
         default:
