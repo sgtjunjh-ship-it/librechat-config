@@ -10,10 +10,8 @@ registration:
 endpoints:
   anthropic:
     models:
-      default:
-        - "claude-opus-5"
-        - "claude-sonnet-5"
-      fetch: false
+      - "claude-opus-5"
+      - "claude-sonnet-5"
 
   google:
     models:
