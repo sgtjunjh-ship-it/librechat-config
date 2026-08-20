@@ -18,16 +18,6 @@ endpoints:
       titleModel: 'claude-sonnet-5'
       modelDisplayLabel: 'Claude'
 
-    - name: 'Google'
-      apiKey: '${GOOGLE_CUSTOM_KEY}'
-      baseURL: 'https://generativelanguage.googleapis.com/v1beta/openai/'
-      models:
-        default: ['gemini-3.1-flash-lite']
-        fetch: true
-      titleConvo: true
-      titleModel: 'gemini-3.1-flash-lite'
-      modelDisplayLabel: 'Google'
-
     - name: 'ChatGPT'
       apiKey: '${OPENAI_CUSTOM_KEY}'
       baseURL: 'https://api.openai.com/v1'
