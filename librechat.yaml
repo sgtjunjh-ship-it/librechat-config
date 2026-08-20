@@ -1,12 +1,8 @@
 version: 1.3.11
-
 cache: true
-
 fileStrategy: 'local'
-
 registration:
   socialLogins: []
-
 endpoints:
   custom:
     - name: 'Claude'
@@ -21,3 +17,24 @@ endpoints:
       titleConvo: true
       titleModel: 'claude-sonnet-5'
       modelDisplayLabel: 'Claude'
+
+    - name: 'Google'
+      apiKey: '${GOOGLE_CUSTOM_KEY}'
+      baseURL: 'https://generativelanguage.googleapis.com/v1beta/openai/'
+      models:
+        fetch: true
+      titleConvo: true
+      titleModel: 'gemini-3.1-flash-lite'
+      modelDisplayLabel: 'Google'
+
+    - name: 'ChatGPT'
+      apiKey: '${OPENAI_CUSTOM_KEY}'
+      baseURL: 'https://api.openai.com/v1'
+      models:
+        default:
+          - 'gpt-5.6-terra'
+          - 'gpt-5.4-mini'
+        fetch: false
+      titleConvo: true
+      titleModel: 'gpt-5.4-mini'
+      modelDisplayLabel: 'ChatGPT'
