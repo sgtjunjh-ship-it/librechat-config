@@ -25,18 +25,8 @@ endpoints:
       apiKey: '${OPENAI_CUSTOM_KEY}'
       baseURL: 'https://api.openai.com/v1'
       models:
-        default:
-          - 'gpt-5.6-sol'
-          - 'gpt-5.6-terra'
-          - 'gpt-5.6-luna'
-          - 'gpt-5.4-mini'
-          - 'gpt-5.4-nano'
-          - 'gpt-4.1'
-          - 'gpt-4.1-mini'
-          - 'gpt-4.1-nano'
-          - 'gpt-4o'
-          - 'gpt-4o-mini'
-        fetch: false
+        default: ['gpt-5.6-terra']
+        fetch: true
       titleConvo: true
-      titleModel: 'gpt-5.4-nano'
+      titleModel: 'gpt-5.6-terra'
       modelDisplayLabel: 'ChatGPT'
