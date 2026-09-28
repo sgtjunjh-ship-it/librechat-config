@@ -3,6 +3,12 @@ cache: true
 fileStrategy: 'local'
 registration:
   socialLogins: []
+fileConfig:
+  endpoints:
+    agents:
+      fileLimit: 20
+    default:
+      fileLimit: 20
 endpoints:
   custom:
     - name: 'Claude'
