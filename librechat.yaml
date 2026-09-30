@@ -11,6 +11,16 @@ fileConfig:
       fileLimit: 20
 endpoints:
   custom:
+    - name: 'ChatGPT'
+      apiKey: '${OPENAI_CUSTOM_KEY}'
+      baseURL: 'https://api.openai.com/v1'
+      models:
+        default: ['gpt-5.6-terra']
+        fetch: true
+      titleConvo: true
+      titleModel: 'gpt-5.6-terra'
+      modelDisplayLabel: 'ChatGPT'
+
     - name: 'Claude'
       provider: 'anthropic'
       apiKey: '${ANTHROPIC_CUSTOM_KEY}'
@@ -24,13 +34,3 @@ endpoints:
       titleConvo: true
       titleModel: 'claude-sonnet-5-5'
       modelDisplayLabel: 'Claude'
-
-    - name: 'ChatGPT'
-      apiKey: '${OPENAI_CUSTOM_KEY}'
-      baseURL: 'https://api.openai.com/v1'
-      models:
-        default: ['gpt-5.6-terra']
-        fetch: true
-      titleConvo: true
-      titleModel: 'gpt-5.6-terra'
-      modelDisplayLabel: 'ChatGPT'
