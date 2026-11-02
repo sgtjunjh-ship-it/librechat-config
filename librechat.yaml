@@ -3,6 +3,9 @@ cache: true
 fileStrategy: 'local'
 registration:
   socialLogins: []
+interface:
+  contextUsage: true
+  contextCost: true
 fileConfig:
   endpoints:
     agents:
@@ -20,6 +23,11 @@ endpoints:
       titleConvo: true
       titleModel: 'gpt-5.6-terra'
       modelDisplayLabel: 'ChatGPT'
+      tokenConfig:
+        gpt-6.1-sol:
+          prompt: 2
+          completion: 10
+          context: 1050000
 
     - name: 'Claude'
       provider: 'anthropic'
@@ -34,3 +42,11 @@ endpoints:
       titleConvo: true
       titleModel: 'claude-sonnet-5-5'
       modelDisplayLabel: 'Claude'
+      tokenConfig:
+        claude-sonnet-5-5:
+          prompt: 2
+          completion: 10
+          context: 1000000
+          cacheRead: 0.2
+          cacheWrite: 2.5
+          cacheWrite1h: 4
