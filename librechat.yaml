@@ -6,6 +6,10 @@ registration:
 interface:
   contextUsage: true
   contextCost: true
+balance:
+  enabled: true
+  startBalance: 100000000000
+  autoRefillEnabled: false
 fileConfig:
   endpoints:
     agents:
