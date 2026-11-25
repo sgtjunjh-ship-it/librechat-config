@@ -58,3 +58,16 @@ endpoints:
           cacheRead: 0.2
           cacheWrite: 2.5
           cacheWrite1h: 4
+
+mcpSettings:
+  allowedAddresses:
+    - 'docx-mcp.railway.internal:8080'
+
+mcpServers:
+  docx:
+    type: streamable-http
+    url: 'http://docx-mcp.railway.internal:8080/mcp'
+    headers:
+      Authorization: 'Bearer ${DOCX_MCP_AUTH_TOKEN}'
+    requiresOAuth: false
+    timeout: 120000
