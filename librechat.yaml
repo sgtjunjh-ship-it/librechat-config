@@ -6,6 +6,7 @@ registration:
 interface:
   contextUsage: true
   contextCost: true
+  feedback: false
 balance:
   enabled: true
   startBalance: 100000000000
