@@ -27,6 +27,8 @@ endpoints:
       titleConvo: true
       titleModel: 'gpt-6.1-terra'
       modelDisplayLabel: 'ChatGPT'
+      addParams:
+        useResponsesApi: true
       tokenConfig:
         gpt-6.2-sol:
           prompt: 2
